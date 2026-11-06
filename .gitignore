@@ -1,0 +1,29 @@
+# Local settings with real IDs or secrets
+config.local.*
+*.local.json
+*.parameters.local.json
+.env
+*.env
+
+# Credentials and certificates
+*.pfx
+*.pem
+*.key
+*.cer
+*.crt
+*.publishsettings
+*.rdp
+id_rsa*
+id_ed25519*
+
+# Azure CLI and tool caches
+.azure/
+.bicep/
+
+# Downloaded lab files (fetch them from the Microsoft lab repo instead)
+Allfiles/
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
