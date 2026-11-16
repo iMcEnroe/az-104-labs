@@ -6,12 +6,12 @@
 
 | Run | Date | Time taken |
 | --- | --- | --- |
-| Portal | | |
+| Portal | 16 Nov 2026 | |
 | Script (PowerShell or CLI) | | |
 
 ## What it builds
 
-_One or two sentences on the end state._
+Created member user az104-user1 and an Assigned security group (helpdesk) in the lab tenant (Default Directory). Guest invite skipped.
 
 ## Script
 
@@ -21,14 +21,13 @@ _One or two sentences on the end state._
 
 ## What broke and how I fixed it
 
--
+- Inviting a guest with a Gmail plus alias (name+guest@gmail.com) fails with "The Primary SMTP Address is an invalid value". Skipped the guest step; I invite guests regularly at work.
 
 ## Cleanup
 
-```powershell
-Remove-AzResourceGroup -Name <rg-name> -Force
-```
+Nothing billable. az104-user1 and the helpdesk group were kept for later labs.
 
 ## Exam notes
 
-_Anything that surprised me or is likely to show up on the exam._
+- A guest's UPN is their email with `@` replaced by `_`, then `#EXT#@<tenant>.onmicrosoft.com`, because the identity lives outside the tenant.
+- **User type** (Member or Guest) is about permissions; **#EXT#** is about where the identity comes from. My own Microsoft account shows #EXT# but is a Member, because it created the tenant.
