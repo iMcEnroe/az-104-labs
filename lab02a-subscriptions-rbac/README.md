@@ -33,4 +33,3 @@ In order: remove the helpdesk role assignment, delete the custom role (it can't 
 - "Access management for Azure resources" elevates a Global Admin to **User Access Administrator at root scope (/)**. The portal flags it with an "Action required" banner. Break-glass only; switch it off after use.
 - Whoever creates a management group automatically gets **Owner** on it (shown in the Activity Log as initiated by "Azure Management Groups").
 - Assignments inherit down: root, management group, subscription, resource group, resource.
-- Custom role JSON: `Actions` grants, `NotActions` subtracts from what `Actions` grants, `AssignableScopes` limits where it can be assigned.
